@@ -1,0 +1,43 @@
+div {
+    --border: 1px solid black;
+    --box-sizing: border-box;
+}
+#container {
+    width: 800px;
+    --margin: 0 auto;
+}
+/* 크기 고정, 가운데정렬 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header {
+    width: 100%;
+    height: 100px;
+    background-color: antiquewhite;
+}
+
+#main {
+    height: 500px;
+    background-color: azure;
+}
+    #main-layer1 {
+        width: 20%;
+        height: inherit;
+        background-color: cadetblue;
+        float: left;
+    }
+    #main-layer2 {
+        width: 80%;
+        height: inherit;
+        background-color: aquamarine;
+        float: left;
+    }
+
+#footer {
+    height: 100px;
+    background-color: crimson;
+}
