@@ -90,6 +90,62 @@
         console.log(1 === 1);
         console.log(0 === 0);
 
+        // 숫자
+        var x;
+        //x = 30;
+        x = new Number(30); // Wrapper클래스의 오토박싱과 유사함.
+        var absVal = Math.abs(-4);
+        var randVal = Math.random();
+        var floorVal = Math.floor(3.9);
+        var roundVal = Math.round(3.6);
+        var ceilVal = Math.ceil(3.1);
+        console.log("절대값 : " + absVal + ", 난수 : " + randVal + ", 버림값 : " + floorVal);
+        console.log("반올림값 : " + roundVal + ", 올림값 : " + ceilVal);
+
+        // 문자열
+        var str = "Hello, Javascript, world";
+        // str = new String("Hello, Javascript, world");
+        console.log(str);
+        console.log("대문자 만들기 : " + str.toUpperCase());
+        console.log("소문자 만들기 : " + str.toLowerCase());
+        console.log("문자열 길이 : " + str.length);
+        console.log("인덱스 위치 : " + str.indexOf("1"));
+        console.log("인덱스 위치(뒤에서) : " + str.lastIndexOf("1"));
+        console.log("문자 만들기 : " + str.charAt(0));
+        console.log("문자열 자르기 : " + str.substring(0, 6));
+        var strSplitted = str.split(",");
+        console.log("문자열 자르기2 : " + strSplitted[0] + ", " + strSplitted[1]);
+
+        // 형 변환
+        var trans1 = 7 + 7;
+        var trans2 = 7 + "7";
+        var trans3 = 7 + 7 + "7";
+        var trans4 = "7" + 7 + 7;
+        var trans5 = "7" + (7 + 7);
+        console.log("7 + 7 = " + trans1);
+        console.log("7 + '7' = " + trans2);
+        console.log("7 + 7 + '7' = " + trans3);
+        console.log("'7' + 7 + 7 = " + trans4);
+        console.log("'7' + (7 + 7) = " + trans5);
+
+        // 문자열 -> 숫자
+        var num1 = 2;
+        var num2 = "3";
+        // 문자열을 숫자로 바꿔줘야 함
+        // Integer.parseInt(num2); -> 3
+        num2 = Number(num2);
+        //num2 = parseInt(num2);
+        var result = num1 + num2;
+
+        // 숫자 변환 함수들의 차이점
+        var numStr1 = "2022년도";
+        var numStr2 = "제2022년도";
+        // NaN -> Not a Number;
+        console.log(Number(numStr1));     // NaN
+        console.log(Number(numStr2));     // NaN
+        console.log(parseInt(numStr1));   // 2022
+        console.log(parseInt(numStr2));   // NaN
+        
         // if문
         // input cannot be resolved
         // Uncaught ReferenceError: input is not defined
@@ -118,6 +174,7 @@
         }else{
             console.log("비어있습니다.");
         }
+
     </script>        
 </body>
 </html>
