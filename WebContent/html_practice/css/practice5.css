@@ -31,7 +31,11 @@ input[type=text], input[type=emil], input[type=tel] {
 }
 #button-area {
     margin-top: 20px;
-    text-align: center;
+    --text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
 }
 input[type=submit], input[type=reset] {
     width: 150px;
