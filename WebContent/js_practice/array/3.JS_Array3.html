@@ -25,6 +25,31 @@
             <div style="border:1px solid black; height:100px; width:100px; background-color:yellow;" class="divss" onclick="clickDiv('yellow')" id="yellow" ;></div>
         </div>
     </fieldset><br>
-    
+    <script>
+        var clickArrs = []; // 배열 선언, 할당 및 초기화
+        var index = 0;
+        var str = "";
+        function clickDiv(color) {
+            // 클릭한 것을 변수에 저장
+            var selected = document.querySelector("#"+color);
+            //clickArrs.push(selected);
+            clickArrs[index] = selected;
+            //console.log(clickArrs);
+            selected.style.display = "none";
+            index++; // 배열에 저장하고 안보이게 함
+            if(index == 5) {
+                // 다 담았으면 배열을 출력
+                for(var i = 0; i < index; i++) {
+                    clickArrs[i].style.display = "block";
+                    // 배열에 저장된 값을 꺼내와야 함
+                    // 누적 저장 -> +=
+                    str += clickArrs[i].outerHTML;
+                }
+                document.querySelector("#div5").innerHTML = str;
+                index = 0;
+                str = "";
+            }
+        }
+    </script>
 </body>
 </html>
